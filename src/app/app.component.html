@@ -1,0 +1,120 @@
+<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+  <a class="navbar-brand" href="#">Angular Pagination Component</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
+    aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="javascript:void(0);">Home <span class="sr-only">(current)</span></a>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <a class="btn btn-outline-success my-2 my-sm-0" href="https://github.com/abhishek-misra">More Projects</a>
+    </form>
+  </div>
+</nav>
+
+<main role="main">
+
+  <!-- Main jumbotron for a primary marketing message or call to action -->
+  <div class="jumbotron">
+    <div class="container">
+      <h1 class="display-3">Welcome !</h1>
+      <p>
+        This project is demonstrating how to create custom confirm dialog button in Angular
+      </p>
+      <p>
+        <a class="btn btn-primary btn-lg"
+          href="https://www.c-sharpcorner.com/article/confirm-dialog-in-angular-using-bootstrap-modal/"
+          role="button">Learn more &raquo;</a></p>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="container">  
+      <div class="row">  
+          <div class="col-md-12 text-center">  
+              <h4>Simple Table</h4>  
+          </div>  
+          <div class="col-md-12 ml-auto mr-auto">  
+              <div class="table-responsive">  
+                  <table class="table table-striped">  
+                      <thead>  
+                          <tr>  
+                              <th class="text-center">#</th>  
+                              <th>Product Name</th>  
+                              <th>Type</th>  
+                              <th>Qty</th>  
+                              <th class="text-right">Price</th>  
+                              <th class="text-right">Amount</th>  
+                          </tr>  
+                      </thead>  
+                      <tbody>  
+                          <tr>  
+                              <td class="text-center">1</td>  
+                              <td>Moleskine Agenda</td>  
+                              <td>Office</td>  
+                              <td>25</td>  
+                              <td class="text-right">€ 49</td>  
+                              <td class="text-right">€ 1,225</td>  
+                          </tr>  
+                          <tr>  
+                              <td class="text-center">2</td>  
+                              <td>Stabilo Pen</td>  
+                              <td>Office</td>  
+                              <td>30</td>  
+                              <td class="text-right">€ 10</td>  
+                              <td class="text-right">€ 300</td>  
+                          </tr>  
+                          <tr>  
+                              <td class="text-center">3</td>  
+                              <td>A4 Paper Pack</td>  
+                              <td>Office</td>  
+                              <td>50</td>  
+                              <td class="text-right">€ 10.99</td>  
+                              <td class="text-right">€ 109</td>  
+                          </tr>  
+                          <tr>  
+                              <td class="text-center">4</td>  
+                              <td>Apple iPad</td>  
+                              <td>Meeting</td>  
+                              <td>10</td>  
+                              <td class="text-right">€ 499.00</td>  
+                              <td class="text-right">€ 4,990</td>  
+                          </tr>  
+                          <tr>  
+                              <td class="text-center">5</td>  
+                              <td>Apple iPhone</td>  
+                              <td>Communication</td>  
+                              <td>10</td>  
+                              <td class="text-right">€ 599.00</td>  
+                              <td class="text-right">€ 5,999</td>  
+                          </tr>  
+                      </tbody>  
+                  </table>  
+              </div>  
+          </div>  
+      </div>  
+      <div class="row">  
+              <div class="col-md-12">  
+                  <span><strong>Current Active Page = </strong> {{activePage}}</span>  
+              </div>  
+      </div>  
+      <div class="row">  
+          <div class="col-md-12 ml-auto mr-auto">  
+               <div class="float-right">
+                 <app-pagination [totalRecords]="23" [recordsPerPage]="5" (onPageChange)="displayActivePage($event)"></app-pagination> 
+                </div>     
+          </div>  
+      </div>  
+  </div>  
+  </div> <!-- /container -->
+
+</main>
+<hr/>
+<footer class="container">
+  <p>&copy; Company 2017-2018</p>
+</footer>
